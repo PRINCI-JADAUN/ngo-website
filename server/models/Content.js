@@ -1,0 +1,14 @@
+import mongoose from "mongoose";
+
+const contentSchema = new mongoose.Schema(
+  {
+    data: {
+      type: Object,
+      required: true,
+    },
+  },
+  { timestamps: true }
+);
+
+const Content = mongoose.models.Content || mongoose.model("Content", contentSchema);
+export default Content;
